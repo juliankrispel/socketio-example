@@ -1,0 +1,6 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io.connect('http://localhost');
+    socket.emit('test', { my: 'data' }, function(){ console.log('hello there my man'); });
+    socket.on('other news', function(data){ console.log(data); });
+</script>
